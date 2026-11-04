@@ -41,8 +41,12 @@ module tb_vector_dot4;
         take(32'h7fffffff,1);
         issue(0,0,-40'sd2147483748);
         take(32'h80000000,1);
-        if(outputs != 3) $fatal(1,"Output count");
-        $display("PASS: signed four-lane dot product, stalls and positive/negative saturation");
+        issue({4{16'h8000}},{4{16'h8000}},40'sh7fffffffff);
+        take(32'h7fffffff,1);
+        issue({4{16'h8000}},{4{16'h7fff}},40'sh8000000000);
+        take(32'h80000000,1);
+        if(outputs != 5) $fatal(1,"Output count");
+        $display("PASS: signed four-lane dot product, stalls, saturation and 40-bit bias limits");
         $finish;
     end
     initial begin #20000; $fatal(1,"Watchdog timeout"); end
