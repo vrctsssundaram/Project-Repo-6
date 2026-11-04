@@ -11,7 +11,6 @@ module vector_dot4 (
     input  wire               m_ready,
     output reg                m_saturated
 );
-    timeunit 1ns; timeprecision 1ps;
     // One guard bit accommodates the full 40-bit bias plus four products.
     reg signed [40:0] total;
     reg signed [31:0] product;
