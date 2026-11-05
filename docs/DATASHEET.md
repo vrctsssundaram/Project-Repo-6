@@ -9,4 +9,4 @@
 | `m_valid, m_ready` | Output transfer handshake |
 | `m_saturated` | Overflow/underflow was clamped |
 
-One output register stage; no external memory or AXI control plane.
+One registered output stage with direct operand and result-ready interfaces.
