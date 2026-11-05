@@ -1,4 +1,4 @@
-# VectorMAC-4
+# Four-lane saturating MAC
 
 Four-lane signed 16-bit dot-product engine with 40-bit bias and 32-bit saturation.
 
