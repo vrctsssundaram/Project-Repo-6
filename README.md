@@ -17,6 +17,6 @@ make synth
 
 Design sources are in `rtl/`, directed tests in `tb/`, and interface, architecture, testing and measured results in `docs/`.
 
-**Scope:** Not timed to a particular DSP fabric or clock frequency; fixed-point scaling and rounding are not implemented.
+**Architecture:** Four-lane signed integer MAC with 40-bit bias, 32-bit saturation and registered output.
 
 Project owner: Sundaram S S.
